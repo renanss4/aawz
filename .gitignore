@@ -1,0 +1,6 @@
+/venv
+*__pycache__
+*.pytest_cache
+
+data/resultados.xlsx
+data/socios_cotas.xlsx
