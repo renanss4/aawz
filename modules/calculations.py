@@ -8,7 +8,7 @@ def calculate_commission(df):
     
     # 10% de desconto na comissão para vendas igual ou superior a R$ 1500
     df['Comissão Final'] = df.apply(
-        lambda row: row['Comissão Final'] * 0.90 if row['Comissão'] >= 1500 else row['Comissão Final'], axis=1)
+        lambda row: row['Comissão Final'] * 0.90 if row['Valor da Venda'] >= 1500 else row['Comissão Final'], axis=1)
     
     df['Valor a Pagar'] = df['Comissão Final']
 
