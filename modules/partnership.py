@@ -21,7 +21,6 @@ def get_partnership_data(url):
         partners = pattern_partner.findall(text)
         shares = pattern_shares.findall(text)
 
-        # Criar uma lista de sócios com nome e sobrenome
         partners_list = []
         for partner in partners:
             full_name = partner[1] + partner[2]
