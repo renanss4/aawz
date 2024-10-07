@@ -11,8 +11,12 @@ data/
 ├── Vendas.xlsx            # Contém os dados de vendas para análise
 modules/
 ├── calculations.py        # Módulo para cálculos de comissões
+├── partnership.py         # Módulo para extração de informações de contratos de parceria
 ├── validations.py         # Módulo para validações de pagamentos
-tests/                     # Diretório planejado para testes unitários e de integração
+tests/                     # Diretório para testes unitários e de integração
+├── test_calculations.py   # Testes para o módulo de cálculos de comissões
+├── test_partnership.py    # Testes para o módulo de extração de contratos de partnership
+├── test_validations.py    # Testes para o módulo de validações de pagamentos
 .gitignore                 # Arquivo para excluir itens do controle de versão
 LICENSE                    # Licença do projeto
 main.py                    # Script principal para executar a análise
@@ -25,7 +29,7 @@ requirements.txt           # Dependências necessárias para rodar o projeto
 ### Pré-requisitos
 
 - Python 3.7 ou superior instalado
-- Conexão com a internet para acesso aos documentos Google
+- Conexão com a internet para acesso aos documentos Google (para análise de contratos)
 
 ### Passos para execução
 
@@ -88,13 +92,13 @@ Extrai automaticamente informações dos sócios e suas cotas a partir de contra
 
 ## Rodando os Testes
 
-Para garantir a robustez do projeto, será desenvolvida uma suíte de testes automatizados. Os testes estarão disponíveis em `tests/`. Para executá-los, siga:
+Para garantir a robustez do projeto, uma suíte de testes unitários foi desenvolvida e está disponível na pasta `tests/`. Para executá-los, use o comando abaixo:
 
 ```bash
-pytest tests/
+python -m pytest -v
 ```
 
-> **Nota**: A implementação dos testes está em desenvolvimento.
+Isso executará todos os testes com maior nível de detalhes, mostrando o resultado de cada um individualmente.
 
 ## Licença
 
